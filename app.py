@@ -62,11 +62,11 @@ input_data_scaled=scalar.transform(input_data)
 prediction=model.predict(input_data_scaled)
 prediction_proba=prediction[0][0]
 
-# prediction_proba = model.predict(scaled_input)[0][0]
 st.write(f'Churn probability: {prediction_proba:.2f}')
 
 if prediction_proba > 0.5:
     st.write('Customer is likely to churn.')
 else:
     st.write('Customer is not likely to churn.')
+
 
